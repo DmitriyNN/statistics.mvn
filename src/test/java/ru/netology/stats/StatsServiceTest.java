@@ -44,18 +44,18 @@ public class StatsServiceTest {
     @Test
     public void ShouldFindSumMinMonthSales() {
         StatsService service = new StatsService();
-        long[] SumMinMonth = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expectedSumMinMonth = 5;
-        long actualSumMinMonth = service.minSales(SumMinMonth);
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expectedSumMinMonth = 5;
+        int actualSumMinMonth = service.sumMinMonthCalc(sales);
         Assertions.assertEquals(expectedSumMinMonth, actualSumMinMonth);
     }
 
     @Test
     public void ShouldFindSumMaxMonthSales() {
         StatsService service = new StatsService();
-        long[] SumMaxMonth = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expectedSumMaxMonth = 5;
-        long actualSumMaxMonth = service.minSales(SumMaxMonth);
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expectedSumMaxMonth = 5;
+        int actualSumMaxMonth = service.sumMaxMonthCalc(sales);
         Assertions.assertEquals(expectedSumMaxMonth, actualSumMaxMonth);
     }
 }

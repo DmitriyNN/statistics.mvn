@@ -40,7 +40,7 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public int sumMinMonth(int[] sales) {
+    public int sumMinMonthCalc(int[] sales) {
         int counter = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < averageSale(sales)) {
@@ -50,7 +50,7 @@ public class StatsService {
         return counter;
     }
 
-    public int sumMaxMonth(int[] sales) {
+    public int sumMaxMonthCalc(int[] sales) {
         int counter = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > averageSale(sales)) {
